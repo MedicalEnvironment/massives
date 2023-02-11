@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    // Tenant names
+    string tenants[10] = {"sidorova", "sidrovb", "moskva", "spb", "1234", "moskva", "russia", "pavel", "arkadi", "dima"};
+
+    // Read tenant names
+    for (int i = 0; i < 10; i++) {
+        cout << tenants[i] << "\n";
+    }
+
+    // Read apartment numbers
+    int apartment_numbers[3];
+    for (int i = 0; i < 3; i++) {
+        cout << "Enter apartment number " << i + 1 << ": ";
+        cin >> apartment_numbers[i];
+    }
+
+    // Display tenant names
+    for (int i = 0; i < 3; i++) {
+        int apartment_number = apartment_numbers[i];
+        if (apartment_number >= 1 && apartment_number <= 10) {
+            cout << "Tenant of apartment " << apartment_number << ": "
+                 << tenants[apartment_number - 1] << endl;
+        } else {
+            cout << "Apartment number " << apartment_number << " is invalid." << endl;
+        }
+    }
+
+    return 0;
+}
