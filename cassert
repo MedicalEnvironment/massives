@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cassert>
+
+using namespace std;
+
+float travelTime(float distance, float speed) {
+  assert(speed > 0);
+  return distance / speed;
+}
+
+int main() {
+  float distance, speed;
+  cout << "Enter the distance: ";
+  cin >> distance;
+  cout << "Enter the speed: ";
+  cin >> speed;
+
+  float time = travelTime(distance, speed);
+  cout << "Travel time: " << time << " hours" << endl;
+
+  return 0;
+}
